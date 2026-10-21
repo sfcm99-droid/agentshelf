@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+              <title>AgentShelf</title>
+                <style>
+                    * { box-sizing: border-box; }
+
+                        body {
+                              background: #0f172a;
+                                    color: #f8fafc;
+                                          font-family: Arial, sans-serif;
+                                                margin: 0;
+                                                      padding: 30px 20px;
+                                                          }
+
+                                                              main {
+                                                                    max-width: 650px;
+                                                                          margin: 70px auto;
+                                                                              }
+
+                                                                                  h1 { font-size: 42px; }
+
+                                                                                      p {
+                                                                                            color: #94a3b8;
+                                                                                                  line-height: 1.6;
+                                                                                                      }
+
+                                                                                                          input {
+                                                                                                                width: 100%;
+                                                                                                                      padding: 16px;
+                                                                                                                            border-radius: 10px;
+                                                                                                                                  border: 1px solid #475569;
+                                                                                                                                        background: #1e293b;
+                                                                                                                                              color: white;
+                                                                                                                                                    font-size: 16px;
+                                                                                                                                                        }
+
+                                                                                                                                                            button {
+                                                                                                                                                                  background: #6ee7b7;
+                                                                                                                                                                        color: #0f172a;
+                                                                                                                                                                              border: none;
+                                                                                                                                                                                    padding: 15px 25px;
+                                                                                                                                                                                          border-radius: 10px;
+                                                                                                                                                                                                font-weight: bold;
+                                                                                                                                                                                                      margin-top: 15px;
+                                                                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                    #resultado {
+                                                                                                                                                                                                                          margin-top: 25px;
+                                                                                                                                                                                                                                padding: 20px;
+                                                                                                                                                                                                                                      background: #1e293b;
+                                                                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                                                                                  display: none;
+                                                                                                                                                                                                                                                        overflow-wrap: anywhere;
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                              </style>
+                                                                                                                                                                                                                                                              </head>
+                                                                                                                                                                                                                                                              <body>
+                                                                                                                                                                                                                                                                <main>
+                                                                                                                                                                                                                                                                    <h1>AgentShelf</h1>
+                                                                                                                                                                                                                                                                        <p>
+                                                                                                                                                                                                                                                                              Descubre si tu tienda online está
+                                                                                                                                                                                                                                                                                    preparada para buscadores y agentes
+                                                                                                                                                                                                                                                                                          de inteligencia artificial.
+                                                                                                                                                                                                                                                                                              </p>
+
+                                                                                                                                                                                                                                                                                                  <input id="url" type="url"
+                                                                                                                                                                                                                                                                                                             placeholder="https://tutienda.com">
+
+                                                                                                                                                                                                                                                                                                                 <button onclick="analizar()">
+                                                                                                                                                                                                                                                                                                                       Analizar mi web
+                                                                                                                                                                                                                                                                                                                           </button>
+
+                                                                                                                                                                                                                                                                                                                               <div id="resultado"></div>
+                                                                                                                                                                                                                                                                                                                                 </main>
+
+                                                                                                                                                                                                                                                                                                                                   <script>
+                                                                                                                                                                                                                                                                                                                                       function analizar() {
+                                                                                                                                                                                                                                                                                                                                             const url = document.getElementById("url").value;
+                                                                                                                                                                                                                                                                                                                                                   const resultado =
+                                                                                                                                                                                                                                                                                                                                                           document.getElementById("resultado");
+
+                                                                                                                                                                                                                                                                                                                                                                 resultado.style.display = "block";
+
+                                                                                                                                                                                                                                                                                                                                                                       if (!url) {
+                                                                                                                                                                                                                                                                                                                                                                               resultado.textContent =
+                                                                                                                                                                                                                                                                                                                                                                                         "Introduce una dirección web.";
+                                                                                                                                                                                                                                                                                                                                                                                                 return;
+                                                                                                                                                                                                                                                                                                                                                                                                       }
+
+                                                                                                                                                                                                                                                                                                                                                                                                             resultado.textContent =
+                                                                                                                                                                                                                                                                                                                                                                                                                     "URL recibida: " + url +
+                                                                                                                                                                                                                                                                                                                                                                                                                             ". Próximamente: análisis técnico real.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                   </script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                   </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                   </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                   
